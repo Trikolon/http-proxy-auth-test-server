@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  squid:
+    image: sameersbn/squid
+    ports:
+      - "3128:3128"
+    volumes:
+      - ./squid.conf:/etc/squid/squid.conf
+      - ./passwords:/etc/squid3/passwords
+      - /srv/docker/squid/cache:/var/spool/squid
